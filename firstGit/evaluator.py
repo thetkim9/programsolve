@@ -31,7 +31,11 @@ def verifyCalculation(oper):
                 index = j-1
                 while index>-1 and oper2[index] in priority3:
                     index -= 1
+                if index>-1 and oper2[index]=="-":
+                    index -= 1
                 index2 = j+1
+                if index2>-1 and oper2[index2]=="-":
+                    index2+= 1
                 while index2<len(oper2) and oper2[index2] in priority3:
                     index2 += 1
                 try:
@@ -70,4 +74,3 @@ def evaluation(oper):
 if __name__=="__main__":
     tempStr = input()
     print(evaluation(tempStr))
-
