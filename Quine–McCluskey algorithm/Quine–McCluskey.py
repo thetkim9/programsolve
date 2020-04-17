@@ -104,9 +104,3 @@ for key in dict2:
                 break
 print("EPIs:", EPIs)
 print("and its corresponding values:", [sorted(dict[e]) for e in EPIs])
-
-
-
-
-
-
