@@ -35,8 +35,7 @@ def numOperation(lst, n):
         val += n - v
     return val
 
-
-
+#main logic
 def tabular(vars, ones, donts):
     global candidates
     N = len(vars)
