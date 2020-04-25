@@ -56,7 +56,7 @@ PI를 구한 후 EPI를 구하는 과정은 간단하다. 그냥 PI들을 구성
 
 1번째는 논리식을 나타내는 sum of prime implicants들을 모두 찾는 것이다. 이 과정에서 앞서 언급된 findSet 함수가 호출된다.
 
-2번째는 sum of prime implicants를 연산횟수에 따라 정렬하여, 가장 앞에 있는 것들을 찾아 res에 저장하는 것이다.
+2번째는 sum of prime implicants를 연산횟수에 따라 정렬하여, 가장 앞에 있는 것들을 찾아 res에 저장하는 것이다. 이 과정에서 앞서 언급된 numOperation 함수가 호출된다.
 
 3번째는 res 안에 저장된 이 리스트 형태의 sum of prime implicants들을 처음 주어졌던 변수에 따라 우리가 알아볼수 있는 형태의 논리식으로 변환하는 것이다.  
 
