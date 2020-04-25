@@ -16,7 +16,7 @@ quine-mccluskey 알고리즘을 구현한 코드를 담고 있는 함수로서, 
 
 #### lines 43 ~ 89 (prime implicants를 찾는 과정인 step 1)
 PI를 찾는 코드의 핵심 부분은 다음과 같다.
-```
+```python
 PIs = set([])
     old = table
     new = []
