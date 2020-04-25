@@ -45,10 +45,22 @@ PIs = set([])
         old = new
         new = []
 ```
+항들이 1의 갯수에 따라 grouping 및 나열된 후 한 그룹 내의 항들과 다른 그룹 내의 항들을 한쌍씩 비교해보며, 이 과정은 위에서 언급한 comTerm 함수를 호출함으로써 이루어진다. 결합에 한번도 포함되지 않았던 항들은 prime implicant이므로, PI라는 set에 저장된다. 더 이상 항들이 결합될 수 없을 때, old는 비게 되고, loop은 종료된다.
 <br />
 
 #### lines 90 ~ 108 (essential prime implicants를 찾는 과정인 step 2)
+PI를 구한 후 EPI를 구하는 과정은 간단하다. 그냥 PI들을 구성하는 minterm들의 갯수를 다 세보고 그 갯수가 하나인 것만 찾은 다음, 그 minterm을 포함하는 PI는 EPI가 된다. 이 갯수를 찾을 때는 dictionary를 사용했다.
+<br />
 
 #### lines 109 ~ 165 (최적화된 논리식을 찾는 과정인 step 3)
+이 과정은 크게 3가지 단계로 이루어져 있다. 
+
+1번째는 논리식을 나타내는 sum of prime implicants들을 모두 찾는 것이다. 이 과정에서 앞서 언급된 findSet 함수가 호출된다.
+
+2번째는 sum of prime implicants를 연산횟수에 따라 정렬하여, 가장 앞에 있는 것들을 찾아 res에 저장하는 것이다.
+
+3번째는 res 안에 저장된 이 리스트 형태의 sum of prime implicants들을 처음 주어졌던 변수에 따라 논리식의 형태로 변환하는 것이다.  
+<br />
 
 #### lines 169 ~ (input을 받고 tabular를 호출하는 메인 함수)
+더 이상의 자세한 설명은 생략한다.
