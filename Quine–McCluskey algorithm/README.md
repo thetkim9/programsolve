@@ -8,7 +8,6 @@
 - comTerm 함수: PI를 찾는 과정에서 호출되는 함수로, 이진수로 표현된 두 항들을 비교하여 한 자리만 다르다면 한 항으로 묶을 수 있으므로, 그 결과 항을 리턴하고, 아니라면 False 값을 리턴한다.
 - findSet 함수: 최적화된 논리식을 찾는 과정에서 호출되는 함수로, sum of product을 구성하는 minterm 들을 모두 내포하는 sum of prime implicants 형태의 논리식을 찾아 candidates 리스트 안에 저장한다. 이 논리식들은 최적화가 되어있을수도 되어있지 않을수도 있다.
 - numOperation 함수: candidates 리스트 안에 있는 논리식들을 연산의 횟수대로 정렬하여 최적화된 논리식을 찾는 과정에서 그 논리식의 연산횟수를 계산하여 리턴하는 함수이다.
-<br />
 
 #### lines 38 ~ 165 (tabular 함수)
 quine-mccluskey 알고리즘을 구현한 코드를 담고 있는 함수로서, 메인 함수에 의해 호출을 받고, 변수들, minterm들, 그리고 don't cares를 전달받아 PI들, EPI들, 그리고 최적화된 논리식을 출력한다.
