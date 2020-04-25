@@ -59,7 +59,6 @@ PI를 구한 후 EPI를 구하는 과정은 간단하다. 그냥 PI들을 구성
 2번째는 sum of prime implicants를 연산횟수에 따라 정렬하여, 가장 앞에 있는 것들을 찾아 res에 저장하는 것이다.
 
 3번째는 res 안에 저장된 이 리스트 형태의 sum of prime implicants들을 처음 주어졌던 변수에 따라 논리식의 형태로 변환하는 것이다.  
-<br />
 
 #### lines 169 ~ (input을 받고 tabular를 호출하는 메인 함수)
 더 이상의 자세한 설명은 생략한다.
